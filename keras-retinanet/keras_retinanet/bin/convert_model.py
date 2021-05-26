@@ -60,7 +60,7 @@ def main(args=None):
     args = parse_args(args)
 
     # Set modified tf session to avoid using the GPUs
-    keras.backend.tensorflow_backend.set_session(get_session())
+    #keras.backend.tensorflow_backend.set_session(get_session())
 
     # load and convert model
     model = models.load_model(args.model_in, convert=True, backbone_name=args.backbone, nms=args.nms, class_specific_filter=args.class_specific_filter)
